@@ -1,14 +1,26 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Link, NavLink, Outlet, Route, Routes, useNavigate, useParams} from "react-router-dom";
+import {
+    BrowserRouter,
+    Link,
+    NavLink,
+    Outlet,
+    Route,
+    Routes,
+    useNavigate,
+    useParams,
+    useSearchParams
+} from "react-router-dom";
 
 
 const Profile = () => {
-    const navigate = useNavigate()
+    const [searchParams, setSearchParams] = useSearchParams()
+    console.log(searchParams.get("age"))
+    console.log(Object.fromEntries(searchParams))
     return (
         <div>
             <div>This is the Profile Page</div>
-            <button onClick={()=>navigate(-1)}>go to login</button>
+            <button onClick={()=>setSearchParams({name:"Gago",age: "32", city:"Yerevan"})}>search</button>
         </div>
     )
 }
