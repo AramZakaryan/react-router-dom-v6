@@ -1,17 +1,8 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, NavLink, Outlet, Route, Routes, useParams} from "react-router-dom";
+import {BrowserRouter, NavLink, Route, Routes} from "react-router-dom";
+import {Profile} from "./ProfileComponent";
 
-
-const Profile = () => {
-    const params = useParams()
-    return (
-        <div>
-            <span>This is the Profile Page</span> <br/>
-            <span>id is {params.id}</span>
-        </div>
-    )
-}
 
 function App() {
     return (
