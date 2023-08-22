@@ -5,12 +5,14 @@ import {Profile} from "./ProfileComponent";
 
 
 function App() {
+    const num = "444"
     return (
         <BrowserRouter>
             <div className="App">
                 <NavLink to={"/"}>main</NavLink>---
                 <NavLink to={"/login"}>login</NavLink>---
-                <NavLink to={"/profile"}>profile</NavLink>
+                <NavLink to={"/profile"}>profile</NavLink>---
+                <NavLink to={"/profile/"+num}>profile with id</NavLink>
                 <Routes>
                     <Route path={"/"} element={<div>This is the Main Page</div>}/>
                     <Route path={"/login"} element={<div>This is the Login Page</div>}/>
